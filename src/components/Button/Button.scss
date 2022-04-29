@@ -1,0 +1,43 @@
+.Button{
+    border: none;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 220px;
+    background-color: #ffffff ;
+    color: #bf3939;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover{
+        transition: all 0.3s ease-in-out;
+    filter: drop-shadow(0 3px 3px #333333);
+    }
+
+    &_nav {
+        width: 150px;
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            filter: drop-shadow(0 3px 3px #000000);
+        }
+    }
+    
+    
+    &_secondary {
+        background:#bf3939;
+        color: #ffffff;
+    }
+    
+    &_outline {
+        border: 1px solid #bf3939;
+    }
+    
+    &_heading {
+        width: 200px;
+    }    
+
+}

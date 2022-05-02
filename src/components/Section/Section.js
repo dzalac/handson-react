@@ -7,6 +7,7 @@ const Section = ({
     actionText,
     title,
     buttonText,
+    buttonClickHandler,
     isHeadingVisible = true,
     children
 }) => {
@@ -28,7 +29,7 @@ const Section = ({
                 {actionText && <span className="Section-ActionText">{actionText}</span>}
                 {isHeadingVisible && <div className="Section-Heading">
                     {title && <h2 className="Section-Title">{title}</h2>}
-                    {buttonText && <Button modifiers={['heading', 'outline']}>{buttonText}</Button>}
+                    {buttonText && <Button modifiers={['heading', 'outline']} clickHandler={buttonClickHandler} >{buttonText}</Button>}
                 </div>}
                 {children}
             </div>

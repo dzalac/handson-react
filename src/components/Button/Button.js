@@ -1,6 +1,6 @@
 import "./Button.scss"
 
-const Button = ({modifiers,children }) => {
+const Button = ({modifiers,children, clickHandler }) => {
 
     const modifierClasses = {
         secondary: 'Button_secondary',
@@ -14,7 +14,10 @@ const Button = ({modifiers,children }) => {
 
     modifiers.map(modifier => buttonClass += " " + modifierClasses[modifier]);
 
-    return <button className={buttonClass}>{children}</button>
+    return <button className={buttonClass} onClick={clickHandler} >{children}</button>
+
+    
+
 };
 
 export default Button;

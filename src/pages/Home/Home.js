@@ -10,8 +10,12 @@ import LectureImg3 from '../../assets/Images/lecture-3.jpg';
 import LectureImg4 from '../../assets/Images/lecture-4.jpg';
 import CourseCard from "../../components/CourseCard/Coursecard";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
     return (
         <> 
             <Header/>
@@ -23,6 +27,7 @@ const Home = () => {
                     title={'Open new possibilities'} 
                     actionText={'Learn Something new'}
                     buttonText={'More courses'}
+                    buttonClickHandler={() => navigate('/courses')  }
 
                      > <Grid>
                          <CourseCard

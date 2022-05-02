@@ -1,8 +1,12 @@
 import "./Landing.scss"
 import LandingImg from "../../assets/Images/landing.jpg"
 import Button from "../Button/Button"
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="Landing">
         <img className="Landing-Img" src={LandingImg} alt="landing image"/>
@@ -25,7 +29,7 @@ const Landing = () => {
                     Make a turnaround in your career or upgrade your current skill set with knowledge-based lessons from IT practice.
                 </p>
 
-               <Button modifiers={['landing']}>Explore courses</Button>
+               <Button modifiers={['landing']} clickHandler={() => navigate('/courses')  } >Explore courses</Button>
 
             </div>
         </div>

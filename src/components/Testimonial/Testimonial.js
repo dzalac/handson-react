@@ -1,7 +1,7 @@
 import React from 'react';
 import './Testimonial.scss';
 
-import TestimonialImg from '../../assets/images/testimonial.jpg';
+import TestimonialImg from '../../assets/Images/testimonial.jpg';
 
 const Testimonial = () => {
     return (

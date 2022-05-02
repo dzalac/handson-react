@@ -1,3 +1,5 @@
+@import '../../theme.scss';
+
 
 .Landing {
     height: 100vh;
@@ -47,21 +49,21 @@
     &-ContentInner {
         margin: 0 auto;
 
-        @media (min-width:481px) {
+        @media ($tabletSmall) {
                 width: 450px;
         }
 
-        @media (min-width:768px) {
+        @media ($tablet) {
       
                 width: 550px;          
         }
         
-        @media (min-width:1024px) {
+        @media ($desktop) {
         
                 width: 960px;           
         }
         
-        @media (min-width:1300px) {
+        @media ($desktopLarge) {
           
                 width: 1280px;
         }
@@ -69,12 +71,12 @@
     
     
     &-Title{
-        color: #ffffff;
+        color: $colorBgSecondary;
         font-size: 56px;
         width: 550px;
         margin-bottom: 24px;
 
-        @media (min-width:481px) {
+        @media ($tabletSmall) {
     
                 width: 450px;
                 font-size: 56px; 
@@ -83,12 +85,12 @@
 
     
     &-Subtitle{
-        color: #ffffff;
+        color: $colorBgSecondary;
         font-size: 16px;
         width: 440px;
         margin-bottom: 48px;
 
-        @media (min-width:481px) {
+        @media ($tabletSmall) {
            
                 font-size: 16px;        
         }

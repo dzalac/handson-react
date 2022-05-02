@@ -9,11 +9,11 @@ const SingleCourse = () => {
     return (
 
         <div classNameName="SingleCourse">
-             <figure className="single-course__figure">
-                    <img className="single-course__image" src={LectureImg1} alt="lecture-1.jpg"/>
+             <figure className="SingleCourse-Figure">
+                    <img className="SingleCourse-Image" src={LectureImg1} alt="lecture-1.jpg"/>
             </figure>
 
-            <p className="single-course__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum 
+            <p className="SingleCourse-Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum 
                             bibendum velit, nec ultricies ante aliquam nec. Pellentesque elit massa, rutrum ac dapibus non, pharetra 
                             eget dolor. Aliquam erat volutpat. Fusce interdum nibh mi, vel accumsan lectus commodo quis. Etiam sagittis 
                             vel metus a vehicula. Nunc tincidunt sodales dui non pulvinar. In hac habitasse platea dictumst. Pellentesque 

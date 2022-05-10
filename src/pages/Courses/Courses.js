@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "../../components/Grid/Grid";
+import {Grid} from "../../lib/style/generalStyles";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
@@ -17,7 +17,7 @@ import CourseCard from "../../components/CourseCard/Coursecard";
 const Courses = () => {
     return (
         <> 
-          <Header modifiers={['secondary']} />
+          <Header isSecondary={true} />
 
           <Main>
               <Section title={'All lectures'} >

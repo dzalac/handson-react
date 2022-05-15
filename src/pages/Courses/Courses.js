@@ -3,27 +3,155 @@ import {Grid} from "../../lib/style/generalStyles";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
-import LectureImg1 from '../../assets/Images/lecture-1.jpg';
-import LectureImg2 from '../../assets/Images/lecture-2.jpg';
-import LectureImg3 from '../../assets/Images/lecture-3.jpg';
-import LectureImg4 from '../../assets/Images/lecture-4.jpg';
-import LectureImg5 from '../../assets/Images/lecture-5.jpg';
-import LectureImg6 from '../../assets/Images/lecture-6.jpg';
-import LectureImg7 from '../../assets/Images/lecture-7.jpg';
-import LectureImg8 from '../../assets/Images/lecture-8.jpg';
 import CourseCard from "../../components/CourseCard/Coursecard";
+import { useState, useEffect } from "react";
+import coursesMock from "../../lib/mock/courses";
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/react";
+
 
 
 const Courses = () => {
+
+    const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
+
+    const [courses, setCourses] = useState(null);
+    //const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        //setLoading(true)
+        setTimeout(() => {
+            setCourses(coursesMock)
+            //setLoading(false)
+        },1000)
+
+
+   
+    },[])
+
+   //const [query, setQuery] = useState(" ")
+
+
     return (
         <> 
           <Header isSecondary={true} />
 
           <Main>
               <Section title={'All lectures'} >
+
+                {/*
+                <div>
+                    <input type="text" placeholder="Unesi course" onChange={event => setQuery(event.target.value)} />
+                </div>
+
+    */}
+
+
+
+                {/*
+                courses.filter(courses => {
+                    if (!query) {
+                        return courses;
+                    } else if (courses.title.toLowerCase().includes(query.toLowerCase())) {
+                        return courses;
+                        } 
+                    }).map((course, id) => (
+                        <div className="box" key={id}>
+                            <Grid>
+                          
+                              <CourseCard
+                              key={course.id}
+                              courseId={course.id}
+                              imgSrc={course.imgSrc}
+                              imgAlt={course.imgAlt}
+                              title={course.title}
+                              subtitle={course.subtitle}
+                          />
+                          
+                         </Grid>
+                        
+                        </div>
+                    )) 
+                    */}
+
+                    
+
+                    {/*
+                        loading ?
+                        <ClipLoader 
+                            css={override}
+                            size={150}
+                            color={"#123abc"}
+                            loading={loading}
+                        
+                        />
+
+                        :
+
+                        <Grid>
+                            {courses.map((course) =>  
+                              <CourseCard
+                              key={course.id}
+                              courseId={course.id}
+                              imgSrc={course.imgSrc}
+                              imgAlt={course.imgAlt}
+                              title={course.title}
+                              subtitle={course.subtitle}
+                          />
+                          )}
+                            </Grid>
+
+
+                            */}
+        
+           
+
+              {courses && <Grid>
+                            {courses.map((course) =>  
+                              <CourseCard
+                              key={course.id}
+                              courseId={course.id}
+                              imgSrc={course.imgSrc}
+                              imgAlt={course.imgAlt}
+                              title={course.title}
+                              subtitle={course.subtitle}
+                          />
+                          )}
+                            </Grid>}
+
+                         {/*
+                courses.filter(post => {
+                    if (query === '') {
+                        return post;
+                    } else if (post.title.toLowerCase().includes(query.toLowerCase())) {
+                        return post;
+                        } 
+                    }).map((course, id) => (
+                        <div className="box" key={id}>
+                            <Grid>
+                          
+                              <CourseCard
+                              key={course.id}
+                              courseId={course.id}
+                              imgSrc={course.imgSrc}
+                              imgAlt={course.imgAlt}
+                              title={course.title}
+                              subtitle={course.subtitle}
+                          />
+                          
+                         </Grid>
+                        
+                        </div>
+                    )) 
+                    */}
          
 
-
+            { /*
                   <Grid>
                   <CourseCard
                             imgSrc={LectureImg1}
@@ -74,6 +202,7 @@ const Courses = () => {
                             subtitle={'120+ Minutes'}
                         />
                   </Grid>
+                  */}
               </Section>
           </Main>
             

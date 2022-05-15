@@ -2,15 +2,32 @@ import React from 'react';
 import Button from '../Button/Button';
 import './Section.scss';
 
+import {
+    Section as SectionWrapper,
+    SectionInner,
+    SectionActionText,
+    SectionHeading,
+    SectionTitleH1,
+    SectionTtileH2,
+    SectionTitleH2
+} from "./SectionStyle"
+
 const Section = ({
-    modifiers,
+    isTestimonial,
+    //modifiers,
     actionText,
     title,
     buttonText,
-    buttonClickHandler,
+    //buttonClickHandler,
     isHeadingVisible = true,
-    children
+    children,
+    callback,
+    isMainSection = false,
+    isCentered = false,
 }) => {
+
+
+    {/* 
     const modifierClasses = {
         testimonials: 'Section_testimonials'
     }
@@ -23,7 +40,36 @@ const Section = ({
         });
     }
 
+    */}
+
     return (
+
+  
+
+        <SectionWrapper isTestimonial={isTestimonial}>
+            <SectionInner>
+                {actionText && <SectionActionText> {actionText} </SectionActionText>}
+                {isHeadingVisible && (
+                    <SectionHeading>
+                        {title && (isMainSection ? <SectionTitleH1 isCentered={isCentered} >{title}</SectionTitleH1>  : <SectionTitleH2 isCentered={isCentered} >{title}</SectionTitleH2>)}
+                        {buttonText && (
+                            <Button isHeading isOutlined onClick={callback}>
+                                {buttonText}
+                            </Button>
+                        )}
+                    </SectionHeading>
+                )}
+                {children}
+            </SectionInner>
+        </SectionWrapper>
+
+
+    );
+}
+
+export default Section;
+
+      {/* 
         <section className={sectionClass}>
             <div className="Section-Inner">
                 {actionText && <span className="Section-ActionText">{actionText}</span>}
@@ -34,7 +80,5 @@ const Section = ({
                 {children}
             </div>
         </section>
-    );
-}
 
-export default Section;
+        */}

@@ -43,7 +43,8 @@ const Home = () => {
                     buttonText={'More courses'}
                     buttonClickHandler={() => navigate('/courses')  }
 
-                     > 
+                     >
+                       
 
                      {courses && <Grid>
                             {courses.map((course, index) => index <= 3 && 

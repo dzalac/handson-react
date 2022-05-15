@@ -12,7 +12,7 @@ const Button = ({modifiers,children, clickHandler }) => {
 
     let buttonClass = "Button";
 
-    modifiers.map(modifier => buttonClass += " " + modifierClasses[modifier]);
+    //modifiers.map(modifier => buttonClass += " " + modifierClasses[modifier]);
 
     return <button className={buttonClass} onClick={clickHandler} >{children}</button>
 

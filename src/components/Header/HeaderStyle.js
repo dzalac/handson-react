@@ -60,6 +60,11 @@ export const Hamburger =  styled(HamburgerIcon)`
         path {
             fill: ${colors.bgPrimary};
         }
+
+        
+    ${props => props.isActive && `
+        displyay:none;
+    `}
 `;
 
 export const Nav = styled.nav`

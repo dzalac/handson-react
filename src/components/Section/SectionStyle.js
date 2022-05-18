@@ -1,4 +1,4 @@
-import { breakpoints, colors, fonts } from "../../lib/style/theme"; 
+import { breakpoints, colors } from "../../lib/style/theme"; 
 import styled from "styled-components";
 import { css } from "styled-components";
 

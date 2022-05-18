@@ -14,6 +14,8 @@ export const colors = {
     bgSecondary: "#F6FAFB",
     textPrimary: "#333333",
     textSecondary: "#696969",
+    overlayPrimary: "#bf3939ef",
+    overlaySecondary: "#000000ad"
 
 }
 

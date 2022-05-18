@@ -1,7 +1,7 @@
 import React from "react";
 import {Hamburger as HamburgerWrapper} from "./HamburgerStyle";
-import Button from "../Button/Button";
-import {ButtonLink} from "../Header/HeaderStyle"
+//import Button from "../Button/Button";
+//import {ButtonLink} from "../Header/HeaderStyle"
 
 function Hamburger() {
     return(

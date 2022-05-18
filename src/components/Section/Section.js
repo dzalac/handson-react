@@ -15,6 +15,8 @@ import {
 const Section = ({
     isTestimonial,
     //modifiers,
+    isHeading,
+    isOutlined,
     actionText,
     title,
     buttonText,
@@ -53,7 +55,7 @@ const Section = ({
                     <SectionHeading>
                         {title && (isMainSection ? <SectionTitleH1 isCentered={isCentered} >{title}</SectionTitleH1>  : <SectionTitleH2 isCentered={isCentered} >{title}</SectionTitleH2>)}
                         {buttonText && (
-                            <Button isHeading isOutlined onClick={callback}>
+                            <Button isHeading isOutlined onClick={callback}  >
                                 {buttonText}
                             </Button>
                         )}

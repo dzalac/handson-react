@@ -39,6 +39,7 @@ export const Form = styled(FormFormik)`
 
 export const FormRow = styled.div`
    margin-bottom: 32px;
+   
 
     &:last-child{
         margin-bottom: 0;

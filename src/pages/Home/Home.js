@@ -5,10 +5,6 @@ import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
-import LectureImg1 from '../../assets/Images/lecture-1.jpg';
-import LectureImg2 from '../../assets/Images/lecture-2.jpg';
-import LectureImg3 from '../../assets/Images/lecture-3.jpg';
-import LectureImg4 from '../../assets/Images/lecture-4.jpg';
 import CourseCard from "../../components/CourseCard/Coursecard";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +23,7 @@ const Home = () => {
         },1000)
    
     },[])
+    
 
     
 

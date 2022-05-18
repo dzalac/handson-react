@@ -101,7 +101,7 @@ const Register = () => {
                         </FormRow>
 
                         <FormRow>
-                            <Button isOutlined  isForm disabled={formik.isSubmitting} >
+                            <Button isOutlined isForm disabled={formik.isSubmitting} >
                                 {
                                     formik.isSubmitting ? 'Processing...' : 'Register'
                                 }

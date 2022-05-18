@@ -10,7 +10,7 @@ import {
 
 import Hamburger2 from "../Hamburger/Hamburger";
 
-const Header = ({isSecondary}) => {
+const Header = ({isSecondary, isNav}) => {
     
     //ovdje je nav link, ali ne radi
 
@@ -41,11 +41,13 @@ const Header = ({isSecondary}) => {
                     
                     <HeaderNavLink to="/courses">Courses </HeaderNavLink>
                     <ButtonLink to="/sign-in" >
-                        <Button modifiers={['nav']} >Sign In</Button>
+                     {/* <Button modifiers={['nav']} >Sign In</Button>*/}
+                        <Button isNav={isNav} >Sign In</Button>  
                     </ButtonLink>
 
                     <ButtonLink to="/register" >
-                        <Button modifiers={['nav', 'secondary']}>Register</Button>
+                       {/*<Button modifiers={['nav', 'secondary']}>Register</Button> */} 
+                       <Button  isNav={isNav} isSecondary={isSecondary} > Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>

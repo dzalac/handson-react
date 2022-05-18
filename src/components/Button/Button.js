@@ -1,20 +1,23 @@
 import "./Button.scss"
+import {Button as ButtonWrapper} from "./ButtonStyle";
 
-const Button = ({modifiers,children, clickHandler }) => {
+const Button = ({children, clickHandler, ...otherProps}) => {
 
-    const modifierClasses = {
+    {/*const modifierClasses = {
         secondary: 'Button_secondary',
         nav: 'Button_nav',
         landing: 'Button_landing',
         heading: 'Button_heading',
         outline: 'Button_outline'
-    };
+    }; */}
 
-    let buttonClass = "Button";
+    //let buttonClass = "Button";
 
     //modifiers.map(modifier => buttonClass += " " + modifierClasses[modifier]);
 
-    return <button className={buttonClass} onClick={clickHandler} >{children}</button>
+    return (
+        <ButtonWrapper {...otherProps} onClick={clickHandler} >{children}</ButtonWrapper>
+    ) //<button className={buttonClass} onClick={clickHandler} >{children}</button>
 
     
 

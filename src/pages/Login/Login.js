@@ -3,7 +3,7 @@ import Section from "../../components/Section/Section";
 import {Form, Field, FormRow, Select, Option, ErrorMessage} from "../../lib/style/generalStyles";
 import {Formik, validateYupSchema, yupToFormErrors} from "formik";
 import * as Yup from "yup";
-import Button from '../../components/Button/Button';
+import {Button} from "../../lib/style/generalStyles";
 
 
 const Login = () => {

@@ -9,6 +9,7 @@ import CourseCard from "../../components/CourseCard/Coursecard";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
 import coursesMock from "../../lib/mock/courses";
+import {Button} from "../../lib/style/generalStyles";
 
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
 
     return (
         <> 
-            <Header/>
+            <Header isNav={true} />
             <Main>
                 <section>
                     <Landing/>

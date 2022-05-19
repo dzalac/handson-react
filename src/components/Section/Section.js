@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button/Button';
+import {Button} from "../../lib/style/generalStyles";
 import './Section.scss';
 
 import {

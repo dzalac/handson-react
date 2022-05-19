@@ -1,16 +1,16 @@
 import React from "react";
 import "./Header.scss"
 import LogoImg from "../../assets/Images/logo.svg"
-import Button from "../Button/Button";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
     Header as HeaderWrapper,HeaderInner,LogoLink,LogoImg as LogoElement,Hamburger,Nav,HeaderNavLink,ButtonLink
 } from "./HeaderStyle"
+import {Button} from "../../lib/style/generalStyles";
 
 import Hamburger2 from "../Hamburger/Hamburger";
 
-const Header = ({isSecondary, isNav}) => {
+const Header = ({isSecondary}) => {
     
     //ovdje je nav link, ali ne radi
 
@@ -37,17 +37,14 @@ const Header = ({isSecondary, isNav}) => {
                 </LogoLink>
                 <Hamburger onClick={() => setShowMenu(!showMenu) } />
                 {menu}
-                <Nav>
-                    
-                    <HeaderNavLink to="/courses">Courses </HeaderNavLink>
+                <Nav>                 
+                    <HeaderNavLink to="/courses">Courses</HeaderNavLink>
                     <ButtonLink to="/sign-in" >
-                     {/* <Button modifiers={['nav']} >Sign In</Button>*/}
-                        <Button isNav={isNav} >Sign In</Button>  
+                        <Button isNav>Sign In</Button>  
                     </ButtonLink>
 
                     <ButtonLink to="/register" >
-                       {/*<Button modifiers={['nav', 'secondary']}>Register</Button> */} 
-                       <Button  isNav={isNav} isSecondary={isSecondary} > Register</Button>
+                       <Button  isNav isSecondary>Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>

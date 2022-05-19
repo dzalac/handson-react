@@ -1,6 +1,6 @@
 import "./Landing.scss"
 import LandingImg from "../../assets/Images/landing.jpg"
-import Button from "../Button/Button"
+import {Button} from "../../lib/style/generalStyles";
 import { useNavigate } from "react-router-dom";
 import {
     Landing as LandingWrapper,

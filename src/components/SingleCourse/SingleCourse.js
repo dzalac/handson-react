@@ -4,7 +4,9 @@ import {SingleCourse as SingleCourseWrapper, SingleCourseFigure, SingleCourseImg
 
 
 
-const SingleCourse = (imgSrc, imgAlt,text) => {
+const SingleCourse = (
+    
+    imgSrc, imgAlt,text) => {
 
     return (
 

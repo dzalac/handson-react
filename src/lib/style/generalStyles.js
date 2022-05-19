@@ -26,15 +26,64 @@ export const Grid = styled.div`
 
 `;
 
-export const Form = styled(FormFormik)`
-    @media (${breakpoints.tabletSmall}){
+export const Button = styled.button`
+    border: none;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 220px;
+    background-color: ${colors.bgPrimary};
+    color: ${colors.primary};
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+
+    &:hover{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        cursor: pointer;
+    }
+
+    ${props => props.isSecondary && `
+        background: ${colors.primary};
+        color: ${colors.bgPrimary};
+    `}
+
+    ${props => props.isNav && `
+        width: 150px;
+    `}
+
+    ${props => props.isOutlined && `
+         border: 1px solid ${colors.primary};
+
+    `}
+
+    ${props => props.isHeading && `
+          width: 200px;
+    `}
+
+    
+    ${props => props.isForm && `
+            width: 220px;
+            display: block;
+            margin: 0 auto;          
+        `}
+
+`;
+
+export const FormWrapper = styled.div`
+     @media (${breakpoints.tabletSmall}){
         width: 400px;
 
         ${props => props.isCentered !== false && `
             margin: 0 auto;
         `}
     }
+`;
 
+export const Form = styled(FormFormik)`
 `;
 
 export const FormRow = styled.div`
@@ -81,7 +130,7 @@ export const Option = styled.option``;
 
 
 export const ErrorMessage = styled(ErrorMessageFormik)`
-    font-size: 32px;
+    font-size: 14px;
     color: ${colors.primary};
     padding-top: 8px;
 `;

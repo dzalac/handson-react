@@ -21,14 +21,12 @@ const Course = () => {
     },[]);
 
     useEffect(() => {
-        courses && setCourse(...courses.filter(course => course.id === parseInt(id) ))
+        courses && setCourse(...courses.filter(course => course.id === parseInt(id)));
     },[courses, id]);
-
 
     return (
         <> 
           <Header isSecondary={true} />
-
           {course && (
              <Main>
                 <Section 
@@ -36,20 +34,14 @@ const Course = () => {
                     actionText={course.subtitle} 
                     buttonText={'Back'} 
                     buttonClickHandler={() => navigate(-1)}  
-                >
-                
-                
-                <SingleCourse  imgSrc={course.ImgSrc} imgAlt={course.imgAlt} text={course.text} ></SingleCourse>
-    
-                </Section>
-     
+                >            
+                    <SingleCourse  
+                        imgSrc={course.imgSrc} 
+                        imgAlt={course.imgAlt} 
+                        text={course.text} />
+                </Section>  
             </Main>
-
           )}
-
-       
-          
-            
         </>
     );
 };

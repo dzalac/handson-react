@@ -4,19 +4,14 @@ import {SingleCourse as SingleCourseWrapper, SingleCourseFigure, SingleCourseImg
 
 
 
-const SingleCourse = (
-    
-    imgSrc, imgAlt,text) => {
-
+const SingleCourse = ({imgSrc, imgAlt, text}) => {
     return (
-
         <SingleCourseWrapper>
             <SingleCourseFigure>
                 <SingleCourseImg src={imgSrc} alt={imgAlt} />
             </SingleCourseFigure>
             <SingleCourseText>{text}</SingleCourseText>
         </SingleCourseWrapper>
-
         );
 }
 

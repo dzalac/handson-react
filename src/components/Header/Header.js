@@ -23,20 +23,15 @@ const Header = ({isSecondary}) => {
 
     const [showMenu, setShowMenu] = useState(false);
 
-    let menu;
-
-    if(showMenu){
-        menu= <Hamburger2 />
-    }
-
+    
     return (
+        <>
         <HeaderWrapper isSecondary={isSecondary}>
             <HeaderInner>
                 <LogoLink to="/">
                     <LogoElement src={LogoImg} alt="logo" />
                 </LogoLink>
                 <Hamburger onClick={() => setShowMenu(!showMenu) } />
-                {menu}
                 <Nav>                 
                     <HeaderNavLink to="/courses">Courses</HeaderNavLink>
                     <ButtonLink to="/sign-in" >
@@ -49,6 +44,11 @@ const Header = ({isSecondary}) => {
                 </Nav>
             </HeaderInner>
         </HeaderWrapper>
+
+        {showMenu && 
+            <Hamburger2 />
+        }
+        </>
     );
 
 

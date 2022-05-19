@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid} from "../../lib/style/generalStyles";
+import {Grid, Search} from "../../lib/style/generalStyles";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
@@ -35,10 +35,10 @@ const Courses = () => {
         <> 
           <Header isSecondary={true} />
           <Main>
-              <Section title={'All lectures'} >              
-                <div>
-                    <input type="text" placeholder="Unesi course" onChange={event => handleSearch(event.target.value)} />
-                </div>
+              <Section title={'All lectures'} >   
+                <div>    
+                    <Search type="text" placeholder="Unesi course" onChange={event => handleSearch(event.target.value)} />             
+                </div>   
                 {courses && <Grid>
                     {courses.map((course) =>  
                         <CourseCard

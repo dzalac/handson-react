@@ -136,4 +136,19 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
 `;
 
 
+export const Search = styled.input`
+    display: grid;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 220px;
+    height: 30px;
+    border: 2px solid ${colors.textPrimary};
+    border-radius: 10px;
+
+    ::placeholder{
+        text-align: center;
+    }
+`;
+
+
 

@@ -1,6 +1,6 @@
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
-import {Form, Field, FormRow, Select, Option, ErrorMessage} from "../../lib/style/generalStyles";
+import {Form, Field, FormRow, Select, Option, ErrorMessage, FormWrapper} from "../../lib/style/generalStyles";
 import {Formik, validateYupSchema, yupToFormErrors} from "formik";
 import * as Yup from "yup";
 import {Button} from "../../lib/style/generalStyles";
@@ -38,33 +38,27 @@ const Login = () => {
             
             >
                 {formik => (
-                    <Form isCentered >
-                        <FormRow>
-         
-
-                            <Field type='email' name='email' placeholder='Email...' disabled={formik.isSubmitting} />
-                            <ErrorMessage component={'div'} name='email' />
-
-                            <Field type='password' name='password' placeholder='Password...' disabled={formik.isSubmitting} />
-                            <ErrorMessage component={'div'} name='password' />
-
-                          
-
-                        </FormRow>
-
-                        <FormRow>
-                            <Button isOutlined  isForm disabled={formik.isSubmitting} >
-                                {
-                                    formik.isSubmitting ? 'Processing...' : 'Sign In'
-                                }
-                            </Button>
-                        </FormRow>
-                    </Form>
+                    <FormWrapper>
+                        <Form isCentered >
+                            <FormRow>
+                                <Field type='email' name='email' placeholder='Email...' disabled={formik.isSubmitting} />
+                                <ErrorMessage component={'div'} name='email' />
+                            </FormRow>
+                            <FormRow>
+                                <Field type='password' name='password' placeholder='Password...' disabled={formik.isSubmitting} />
+                                <ErrorMessage component={'div'} name='password' />                        
+                            </FormRow>
+                            <FormRow>
+                                <Button isOutlined  isForm disabled={formik.isSubmitting} >
+                                    {
+                                        formik.isSubmitting ? 'Processing...' : 'Sign In'
+                                    }
+                                </Button>
+                            </FormRow>
+                        </Form>
+                    </FormWrapper>
                 )}
-
-
             </Formik>
-
         </Section>
         </>
     )

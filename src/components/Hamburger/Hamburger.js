@@ -12,8 +12,7 @@ function Hamburger() {
                 <a href="/courses"> Courses</a>
                 <a href="/"> Register</a>
                 <a href="/"> Sign In</a>
-             
-       
+                   
         </div>
 
         </HamburgerWrapper>

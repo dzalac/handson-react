@@ -9,13 +9,12 @@ import CourseCard from "../../components/CourseCard/Coursecard";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
 import coursesMock from "../../lib/mock/courses";
-import {Button} from "../../lib/style/generalStyles";
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/react";
 
 
 const Home = () => {
-
     const navigate = useNavigate();
-
     const [courses, setCourses] = useState(null);
 
     useEffect(() => {
@@ -24,10 +23,13 @@ const Home = () => {
         },1000)
    
     },[])
-    
 
-    
-
+    const override = css`
+        display: block;
+        margin: 0 auto;
+        border-color: red;
+    `;
+ 
     return (
         <> 
             <Header isNav={true} />
@@ -39,7 +41,7 @@ const Home = () => {
                     title={'Open new possibilities'} 
                     actionText={'Learn Something new'}
                     buttonText={'More courses'}
-                    buttonClickHandler={() => navigate('/courses')  }
+                    onClick={() => navigate('/courses')  }
 
                      >
                        
@@ -53,40 +55,14 @@ const Home = () => {
                               imgAlt={course.imgAlt}
                               title={course.title}
                               subtitle={course.subtitle}
-                          />
-                          )}
-                         </Grid>}
-                     
-                     {/*
-                     <Grid>
-                         <CourseCard
-                            imgSrc={LectureImg1}
-                            imgAlt={'Introduction'}
-                            title={'1. Introduction'}
-                            subtitle={'60 Minutes'}
                         />
-                        <CourseCard
-                            imgSrc={LectureImg2}
-                            imgAlt={'HTML & CSS'}
-                            title={'2. HTML & CSS'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg3}
-                            imgAlt={'Version Control System'}
-                            title={'3. Version Control System'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg4}
-                            imgAlt={'Advanced CSS'}
-                            title={'4. Advanced CSS'}
-                            subtitle={'120+ Minutes'}
-                        />
-                    </Grid>
-
-                     */}
-                
+                        )}
+                        </Grid>}
+                        <ClipLoader 
+                        css={override}
+                        size={150}
+                        color={"#123abc"}
+                        loading={!courses}/>                                               
                 </Section>   
 
                 <Section isHeadingVisible={false} modifiers={['Testimonials']}> <Testimonial></Testimonial> </Section>      

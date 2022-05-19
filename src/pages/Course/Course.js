@@ -33,7 +33,7 @@ const Course = () => {
                     title={course.title} 
                     actionText={course.subtitle} 
                     buttonText={'Back'} 
-                    buttonClickHandler={() => navigate(-1)}  
+                    onClick={() => navigate(-1)}  
                 >            
                     <SingleCourse  
                         imgSrc={course.imgSrc} 

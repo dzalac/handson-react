@@ -1,19 +1,27 @@
 import React from "react";
-import {Hamburger as HamburgerWrapper} from "./HamburgerStyle";
-//import Button from "../Button/Button";
-//import {ButtonLink} from "../Header/HeaderStyle"
+import {Hamburger as HamburgerWrapper, HamburgerInner} from "./HamburgerStyle";
+import {Button} from "../../lib/style/generalStyles";
+import {useNavigate } from "react-router-dom";
+import {HeaderNavLink} from "../Header/HeaderStyle";
 
 function Hamburger() {
+    const navigate = useNavigate();
+    
     return(
+        
+        
 
         <HamburgerWrapper>
-        <div>
-         
-                <a href="/courses"> Courses</a>
-                <a href="/"> Register</a>
-                <a href="/"> Sign In</a>
-                   
-        </div>
+           
+            <Button isHamburger isOutlined onClick={() => navigate(-1)}>Close</Button>
+            <HamburgerInner>    
+            
+                <HeaderNavLink to="/courses">Courses</HeaderNavLink>
+                <HeaderNavLink to="/register">Register</HeaderNavLink>
+                <HeaderNavLink to="/sign-in">Sign in</HeaderNavLink>
+            </HamburgerInner>    
+                    
+       
 
         </HamburgerWrapper>
     )

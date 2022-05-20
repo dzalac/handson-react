@@ -70,6 +70,11 @@ export const Button = styled.button`
             display: block;
             margin: 0 auto;          
         `}
+    
+    ${props => props.isHamburger && `
+        display: block;
+        margin: 0 auto; 
+    `}
 
 `;
 
@@ -138,15 +143,35 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
 
 export const Search = styled.input`
     display: grid;
-    margin: 0 auto;
-    margin-bottom: 60px;
+    margin: auto;
+    margin-bottom: 40px;
     width: 220px;
     height: 30px;
-    border: 2px solid ${colors.textPrimary};
-    border-radius: 10px;
+    border: 1px solid ${colors.textSecondary};
+    border-radius: 6px;
+    line-height: 40px;
+    outline:none;
+    font-size:14px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
 
+    :focus{
+        border: 1px solid ${colors.textPrimary};
+    }
+    
     ::placeholder{
         text-align: center;
+    }
+
+    @media(${breakpoints.tabletMedium}){
+        width:400px;
+        padding:0;  
+    }
+    
+    @media(${breakpoints.desktop}){
+        font-size: 16px;
     }
 `;
 

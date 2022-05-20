@@ -3,16 +3,13 @@ import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme"; 
 
 export const Course = styled(Link)`
-
         &:hover {
             figure {
                 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
             }
-
             img {
                 transform: scale(1.05);
             }
-
             h3 {
                 color: $colorPrimary;
             }

@@ -24,9 +24,6 @@ const Section = ({
     }) => {
 
     return (
-
-  
-
         <SectionWrapper isTestimonial={isTestimonial}>
             <SectionInner>
                 {actionText && <SectionActionText> {actionText} </SectionActionText>}
@@ -43,8 +40,6 @@ const Section = ({
                 {children}
             </SectionInner>
         </SectionWrapper>
-
-
     );
 }
 

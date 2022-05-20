@@ -10,12 +10,10 @@ export const Section = styled.section`
     }
 
     ${(props) =>
-        props.isTestimonial &&
-        `
+        props.isTestimonial &&`
             background-color: ${colors.bgSecondary};
         `
     }
-
 `;
 
 export const SectionInner = styled.div`
@@ -61,7 +59,6 @@ const TitleStyle = css`
 
     @media(${breakpoints.desktop}) {
         font-size: 36px;
-
     }
 
 `;
@@ -69,7 +66,6 @@ const TitleStyle = css`
 
 export const SectionTitleH1 = styled.h1`
    ${TitleStyle}
-
    ${(props) => props.isCentered && `
     
     text-align: center;
@@ -81,7 +77,6 @@ export const SectionTitleH1 = styled.h1`
 export const SectionTitleH2 = styled.h2`
    ${TitleStyle}
    ${(props) => props.isCentered && `
-    
         text-align: center;
         width: 100%; 
    `}

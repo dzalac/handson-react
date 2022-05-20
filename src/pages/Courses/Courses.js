@@ -48,8 +48,7 @@ const Courses = () => {
                         imgAlt={course.imgAlt}
                         title={course.title}
                         subtitle={course.subtitle}
-                        />)
-                    }
+                        />)}
                 </Grid>}
                 <ClipLoader 
                     css={override}

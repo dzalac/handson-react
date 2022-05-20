@@ -2,8 +2,6 @@ import './SingleCourse.scss';
 import React from "react";
 import {SingleCourse as SingleCourseWrapper, SingleCourseFigure, SingleCourseImg, SingleCourseText} from "./SingleCourseStyle";
 
-
-
 const SingleCourse = ({imgSrc, imgAlt, text}) => {
     return (
         <SingleCourseWrapper>
@@ -12,7 +10,7 @@ const SingleCourse = ({imgSrc, imgAlt, text}) => {
             </SingleCourseFigure>
             <SingleCourseText>{text}</SingleCourseText>
         </SingleCourseWrapper>
-        );
+    );
 }
 
 export default SingleCourse;

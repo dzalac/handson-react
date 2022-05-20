@@ -27,41 +27,34 @@ export const HeaderInner = styled.div `
     align-items: center;
 
     @media (${breakpoints.desktop}) {
-
         width: 960px;
         margin: 0 auto;
         padding: 32px 0;
     }
         
     @media (${breakpoints.desktopLarge}) {
-
         width: 1260px;       
     }
 `;
 
-export const LogoLink = styled(Link)`
-
-`;
-
+export const LogoLink = styled(Link)``;
 
 export const LogoImg = styled.img`
     width: 140px;
 `;
 
-export const Hamburger =  styled(HamburgerIcon)`
-      
-        width: 30px;
-        height: auto;
+export const Hamburger =  styled(HamburgerIcon)`     
+    width: 30px;
+    height: auto;
 
-        @media (${breakpoints.desktop}) {
-            display: none;           
-        }      
-        
-        path {
-            fill: ${colors.bgPrimary};
-        }
+    @media (${breakpoints.desktop}) {
+        display: none;           
+    }      
+    
+    path {
+        fill: ${colors.bgPrimary};
+    }
 
-        
     ${props => props.isActive && `
         displyay:none;
     `}
@@ -71,7 +64,6 @@ export const Nav = styled.nav`
         display: none;
 
         @media (${breakpoints.desktop}) {
-
             display: block;
         }      
 `;
@@ -84,10 +76,7 @@ export const HeaderNavLink = styled(NavLink)`
         ${props =>  props.isActive && `
             textDecoration:underline;
             fontWeight: bold;
-        
         `}
-        
-     
 `;
 
 export const  ButtonLink = styled(Link)`

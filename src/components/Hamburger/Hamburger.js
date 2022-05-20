@@ -8,21 +8,13 @@ function Hamburger() {
     const navigate = useNavigate();
     
     return(
-        
-        
-
         <HamburgerWrapper>
-           
             <Button isHamburger isOutlined onClick={() => navigate(-1)}>Close</Button>
             <HamburgerInner>    
-            
                 <HeaderNavLink to="/courses">Courses</HeaderNavLink>
                 <HeaderNavLink to="/register">Register</HeaderNavLink>
                 <HeaderNavLink to="/sign-in">Sign in</HeaderNavLink>
             </HamburgerInner>    
-                    
-       
-
         </HamburgerWrapper>
     )
 }

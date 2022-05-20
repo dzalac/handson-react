@@ -3,10 +3,7 @@ export const fonts = {
     secondary: '"PT Serif", serif'
 }
 
-//Fonts
-
 export const colors = {
-
     primary: "#bf3939",
     secondary: "#ffffff",
     black: "#000000",
@@ -16,10 +13,7 @@ export const colors = {
     textSecondary: "#696969",
     overlayPrimary: "#bf3939ef",
     overlaySecondary: "#000000ad"
-
 }
-
-//Colors
 
 export const breakpoints = {
     mobileLarge: 'min-width: 375px',
@@ -30,5 +24,4 @@ export const breakpoints = {
     desktopLarge: 'min-width: 1300px'
 }
 
-//Breakpoints
 

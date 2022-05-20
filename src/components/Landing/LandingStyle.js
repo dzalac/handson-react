@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Landing = styled.div`
@@ -48,24 +47,21 @@ export const Content = styled.div`
 `;
 
 export const ContentInner = styled.div`
-     margin: 0 auto;
+    margin: 0 auto;
 
     @media (${breakpoints.tabletSmall}) {
             width: 450px;
     }
 
     @media (${breakpoints.tablet}) {
-
             width: 550px;          
     }
 
     @media (${breakpoints.desktop}) {
-
             width: 960px;           
     }
 
     @media (${breakpoints.desktopLarge}) {
-    
             width: 1280px;
     }
 `; 
@@ -89,7 +85,6 @@ export const Subtitle = styled.p`
         margin-bottom: 48px;
 
         @media (${breakpoints.tabletSmall}) {
-           
                 font-size: 16px;        
         }
 `;

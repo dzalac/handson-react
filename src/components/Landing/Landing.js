@@ -14,34 +14,23 @@ import {
     Subtitle} from "./LandingStyle";
 
 const Landing = (isLanding) => {
-
     const navigate = useNavigate();
 
     return (
-
         <LandingWrapper>
             <LandingImage src={LandingImg} />
             <Overlay>
-                <OverlayPrimary  />
+                <OverlayPrimary />
                 <OverlaySecondary />
             </Overlay>
-
             <Content>
                 <ContentInner>
                     <Title>Learn what matters, Speck Academy powered by FOI</Title>
                     <Subtitle>Make a turnaround in your career or upgrade your current skill set with knowledge-based lessons from IT practice.</Subtitle>
                     <Button isLanding={isLanding}  onClick={() => navigate('/courses')} > Explore Courses</Button>
                 </ContentInner>
-                
-
             </Content>
-
-
         </LandingWrapper>
-
-
-    
-
     );
 };
 

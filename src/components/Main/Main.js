@@ -1,5 +1,3 @@
-import "./Main.scss"
-
 const Main = (props) => {
     return (
         <main className="Main">

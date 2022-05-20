@@ -1,39 +1,50 @@
 import React from 'react';
-import Button from '../Button/Button';
+import {Button} from "../../lib/style/generalStyles";
 import './Section.scss';
 
+import {
+    Section as SectionWrapper,
+    SectionInner,
+    SectionActionText,
+    SectionHeading,
+    SectionTitleH1,
+    SectionTitleH2
+} from "./SectionStyle"
+
 const Section = ({
-    modifiers,
+    isTestimonial,
     actionText,
     title,
     buttonText,
-    buttonClickHandler,
+    onClick,
     isHeadingVisible = true,
-    children
-}) => {
-    const modifierClasses = {
-        testimonials: 'Section_testimonials'
-    }
-
-    let sectionClass = 'Section';
-    
-    if (modifiers){
-        modifiers.map(modifier => {
-            sectionClass += ' ' + modifierClasses[modifier];
-        });
-    }
+    children,
+    isMainSection = false,
+    isCentered = false,
+    }) => {
 
     return (
-        <section className={sectionClass}>
-            <div className="Section-Inner">
-                {actionText && <span className="Section-ActionText">{actionText}</span>}
-                {isHeadingVisible && <div className="Section-Heading">
-                    {title && <h2 className="Section-Title">{title}</h2>}
-                    {buttonText && <Button modifiers={['heading', 'outline']} clickHandler={buttonClickHandler} >{buttonText}</Button>}
-                </div>}
+
+  
+
+        <SectionWrapper isTestimonial={isTestimonial}>
+            <SectionInner>
+                {actionText && <SectionActionText> {actionText} </SectionActionText>}
+                {isHeadingVisible && (
+                    <SectionHeading>
+                        {title && (isMainSection ? <SectionTitleH1 isCentered={isCentered} >{title}</SectionTitleH1>  : <SectionTitleH2 isCentered={isCentered} >{title}</SectionTitleH2>)}
+                        {buttonText && (
+                            <Button isHeading isOutlined  onClick={onClick} >
+                                {buttonText}
+                            </Button>
+                        )}
+                    </SectionHeading>
+                )}
                 {children}
-            </div>
-        </section>
+            </SectionInner>
+        </SectionWrapper>
+
+
     );
 }
 

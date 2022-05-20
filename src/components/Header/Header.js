@@ -1,11 +1,14 @@
 import React from "react";
 import "./Header.scss"
 import LogoImg from "../../assets/Images/logo.svg"
-import Button from "../Button/Button";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
     Header as HeaderWrapper,HeaderInner,LogoLink,LogoImg as LogoElement,Hamburger,Nav,HeaderNavLink,ButtonLink
 } from "./HeaderStyle"
+import {Button} from "../../lib/style/generalStyles";
+
+import Hamburger2 from "../Hamburger/Hamburger";
 
 const Header = ({isSecondary}) => {
     
@@ -18,25 +21,34 @@ const Header = ({isSecondary}) => {
         }
     }
 
+    const [showMenu, setShowMenu] = useState(false);
+
+    
     return (
+        <>
         <HeaderWrapper isSecondary={isSecondary}>
             <HeaderInner>
                 <LogoLink to="/">
                     <LogoElement src={LogoImg} alt="logo" />
                 </LogoLink>
-                <Hamburger />
-                <Nav>
-                    <HeaderNavLink to="/courses">Courses </HeaderNavLink>
-                    <ButtonLink to="/" >
-                        <Button modifiers={['nav']} >Sign In</Button>
+                <Hamburger onClick={() => setShowMenu(!showMenu) } />
+                <Nav>                 
+                    <HeaderNavLink to="/courses">Courses</HeaderNavLink>
+                    <ButtonLink to="/sign-in" >
+                        <Button isNav>Sign In</Button>  
                     </ButtonLink>
 
-                    <ButtonLink to="/" >
-                        <Button modifiers={['nav', 'secondary']}>Register</Button>
+                    <ButtonLink to="/register" >
+                       <Button  isNav isSecondary>Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>
         </HeaderWrapper>
+
+        {showMenu && 
+            <Hamburger2 />
+        }
+        </>
     );
 
 

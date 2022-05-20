@@ -60,6 +60,11 @@ export const Hamburger =  styled(HamburgerIcon)`
         path {
             fill: ${colors.bgPrimary};
         }
+
+        
+    ${props => props.isActive && `
+        displyay:none;
+    `}
 `;
 
 export const Nav = styled.nav`
@@ -75,6 +80,7 @@ export const HeaderNavLink = styled(NavLink)`
         color: ${colors.bgSecondary};
         letter-spacing: 1px;
         margin-right: 48px;
+        
      
 `;
 

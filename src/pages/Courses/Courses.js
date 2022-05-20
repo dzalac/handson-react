@@ -1,84 +1,64 @@
 import React from "react";
-import {Grid} from "../../lib/style/generalStyles";
+import {Grid, Search} from "../../lib/style/generalStyles";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
-import LectureImg1 from '../../assets/Images/lecture-1.jpg';
-import LectureImg2 from '../../assets/Images/lecture-2.jpg';
-import LectureImg3 from '../../assets/Images/lecture-3.jpg';
-import LectureImg4 from '../../assets/Images/lecture-4.jpg';
-import LectureImg5 from '../../assets/Images/lecture-5.jpg';
-import LectureImg6 from '../../assets/Images/lecture-6.jpg';
-import LectureImg7 from '../../assets/Images/lecture-7.jpg';
-import LectureImg8 from '../../assets/Images/lecture-8.jpg';
 import CourseCard from "../../components/CourseCard/Coursecard";
+import { useState, useEffect } from "react";
+import coursesMock from "../../lib/mock/courses";
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/react";
 
 
 const Courses = () => {
+    const [courses, setCourses] = useState(null);
+    const [filteredCourses, setFilteredCourses] = useState(null);
+    const override = css`
+        display: block;
+        margin: 0 auto;
+        border-color: red;
+    `;
+
+    useEffect(() => {      
+        setTimeout(() => {
+            setCourses(coursesMock);
+            setFilteredCourses(coursesMock);           
+        },1000);
+    }, []);
+
+    const handleSearch = (title) => {
+        const filteredResults = filteredCourses.filter(course => course.title.toLowerCase().includes(title.toLowerCase()));
+        setCourses(filteredResults);    
+    }
+
     return (
         <> 
           <Header isSecondary={true} />
-
           <Main>
-              <Section title={'All lectures'} >
-         
-
-
-                  <Grid>
-                  <CourseCard
-                            imgSrc={LectureImg1}
-                            imgAlt={'Introduction'}
-                            title={'1. Introduction'}
-                            subtitle={'60 Minutes'}
-                        />
+              <Section title={'All lectures'} >   
+                <div>    
+                    <Search type="text" placeholder="Unesi course" onChange={event => handleSearch(event.target.value)} />             
+                </div>   
+                {courses && <Grid>
+                    {courses.map((course) =>  
                         <CourseCard
-                            imgSrc={LectureImg2}
-                            imgAlt={'HTML & CSS'}
-                            title={'2. HTML & CSS'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg3}
-                            imgAlt={'Version Control System'}
-                            title={'3. Version Control System'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg4}
-                            imgAlt={'Advanced CSS'}
-                            title={'4. Advanced CSS'}
-                            subtitle={'120+ Minutes'}
-                        />
-                         <CourseCard
-                            imgSrc={LectureImg5}
-                            imgAlt={'JavaScript basics'}
-                            title={'5. JavaScript Basics'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg6}
-                            imgAlt={'Advanced JavaScript'}
-                            title={'6. Advanced JavaScript'}
-                            subtitle={'120+ Minutes'}
-                        />
-                           <CourseCard
-                            imgSrc={LectureImg7}
-                            imgAlt={'JavaScript basics'}
-                            title={'7. Intro to React'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg8}
-                            imgAlt={'Advanced JavaScript'}
-                            title={'8. React events&listeners'}
-                            subtitle={'120+ Minutes'}
-                        />
-                  </Grid>
+                        key={course.id}
+                        courseId={course.id}
+                        imgSrc={course.imgSrc}
+                        imgAlt={course.imgAlt}
+                        title={course.title}
+                        subtitle={course.subtitle}
+                        />)
+                    }
+                </Grid>}
+                <ClipLoader 
+                    css={override}
+                    size={150}
+                    color={"#123abc"}
+                    loading={!courses}/>                      
               </Section>
-          </Main>
-            
-        </>
-    );
+          </Main>          
+        </>);
 };
 
 export default Courses;

@@ -13,54 +13,49 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
     const navigate = useNavigate();
 
     return (
         <> 
-            <Header/>
-            <Main>
-                <section>
-                    <Landing/>
-                </section>
-                <Section  
-                    title={'Open new possibilities'} 
-                    actionText={'Learn Something new'}
-                    buttonText={'More courses'}
-                    buttonClickHandler={() => navigate('/courses')  }
-
-                     > <Grid>
-                         <CourseCard
-                            imgSrc={LectureImg1}
-                            imgAlt={'Introduction'}
-                            title={'1. Introduction'}
-                            subtitle={'60 Minutes'}
+        <Header/>
+        <Main>
+            <section>
+                <Landing/>
+            </section>
+            <Section  
+                title={'Open new possibilities'} 
+                actionText={'Learn Something new'}
+                buttonText={'More courses'}
+                buttonClickHandler={() => navigate('/courses')  }> 
+                <Grid>
+                    <CourseCard
+                        imgSrc={LectureImg1}
+                        imgAlt={'Introduction'}
+                        title={'1. Introduction'}
+                        subtitle={'60 Minutes'}
                         />
-                        <CourseCard
-                            imgSrc={LectureImg2}
-                            imgAlt={'HTML & CSS'}
-                            title={'2. HTML & CSS'}
-                            subtitle={'120+ Minutes'}
+                    <CourseCard
+                        imgSrc={LectureImg2}
+                        imgAlt={'HTML & CSS'}
+                        title={'2. HTML & CSS'}
+                        subtitle={'120+ Minutes'}
                         />
-                        <CourseCard
-                            imgSrc={LectureImg3}
-                            imgAlt={'Version Control System'}
-                            title={'3. Version Control System'}
-                            subtitle={'120+ Minutes'}
+                    <CourseCard
+                        imgSrc={LectureImg3}
+                        imgAlt={'Version Control System'}
+                        title={'3. Version Control System'}
+                        subtitle={'120+ Minutes'}
                         />
-                        <CourseCard
-                            imgSrc={LectureImg4}
-                            imgAlt={'Advanced CSS'}
-                            title={'4. Advanced CSS'}
-                            subtitle={'120+ Minutes'}
+                    <CourseCard
+                        imgSrc={LectureImg4}
+                        imgAlt={'Advanced CSS'}
+                        title={'4. Advanced CSS'}
+                        subtitle={'120+ Minutes'}
                         />
-                    </Grid>
-                
-                </Section>   
-
-                <Section isHeadingVisible={false} modifiers={['Testimonials']}> <Testimonial></Testimonial> </Section>      
-            </Main>
-            
+                </Grid>
+            </Section>   
+            <Section isHeadingVisible={false} modifiers={['Testimonials']}> <Testimonial></Testimonial> </Section>      
+        </Main>   
         </>
     );
 };

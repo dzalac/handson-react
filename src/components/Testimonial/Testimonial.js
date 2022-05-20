@@ -1,6 +1,5 @@
 import React from 'react';
 import './Testimonial.scss';
-
 import TestimonialImg from '../../assets/Images/testimonial.jpg';
 
 const Testimonial = () => {

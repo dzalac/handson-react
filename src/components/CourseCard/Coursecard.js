@@ -9,7 +9,6 @@ const CourseCard = ({
     subtitle
 }) => {
     return (
-        
         <Link to="/course"  className='Course' >
              <figure className="Course-Figure">
                 <img src={imgSrc} alt={imgAlt} className="Course-Img" />   
@@ -17,10 +16,7 @@ const CourseCard = ({
             <h3 className="Course-Title">{title}</h3>
             <p className="Course-Subtitle">{subtitle}</p>
         
-        </Link>
-        
-        
-        
+        </Link> 
     );
 }
 

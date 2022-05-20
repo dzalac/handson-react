@@ -1,7 +1,5 @@
 @import '../../theme.scss';
 
-/*Header*/
-
 .Header {
     position: absolute;
     top: 0;
@@ -22,7 +20,7 @@
         @media ($desktop) {
                 display: none;           
         }      
-        
+
         path {
             fill: $colorBgSecondary;
         }
@@ -34,13 +32,12 @@
         align-items: center;
 
         @media ($desktop) {
-
                 width: 960px;
                 margin: 0 auto;
                 padding: 32px 0;
         }
-        @media ($desktopLarge) {
 
+        @media ($desktopLarge) {
                 width: 1260px;       
         }
     }
@@ -49,7 +46,6 @@
         display: none;
 
         @media ($desktop) {
-
                 display: block;
         }      
     }
@@ -57,8 +53,6 @@
     &-Logo {
         width: 140px;
     }
-    
-    
     
     &-NavLink {
         color: $colorBgSecondary;
@@ -73,8 +67,7 @@
         &:last-child{
             margin-right: 0px;
         }
-    }
-    
+    }   
 }
 
 

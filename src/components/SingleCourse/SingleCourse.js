@@ -8,8 +8,8 @@ const SingleCourse = () => {
 
     return (
 
-        <div classNameName="SingleCourse">
-             <figure className="SingleCourse-Figure">
+        <div className="SingleCourse">
+            <figure className="SingleCourse-Figure">
                     <img className="SingleCourse-Image" src={LectureImg1} alt="lecture-1.jpg"/>
             </figure>
 

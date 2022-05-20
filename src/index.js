@@ -10,10 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <React.StrictMode>
    <Router>
-     <ScrollToTop />
-    <App />
-   </Router>
-   
+      <ScrollToTop />
+      <App />
+   </Router> 
   </React.StrictMode>
 );
 

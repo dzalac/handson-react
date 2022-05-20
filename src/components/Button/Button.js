@@ -16,8 +16,6 @@ const Button = ({modifiers,children, clickHandler }) => {
 
     return <button className={buttonClass} onClick={clickHandler} >{children}</button>
 
-    
-
 };
 
 export default Button;

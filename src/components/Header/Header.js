@@ -2,18 +2,15 @@ import React from "react";
 import "./Header.scss"
 import LogoImg from "../../assets/Images/logo.svg"
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import {
     Header as HeaderWrapper,HeaderInner,LogoLink,LogoImg as LogoElement,Hamburger,Nav,HeaderNavLink,ButtonLink
 } from "./HeaderStyle"
 import {Button} from "../../lib/style/generalStyles";
-
 import Hamburger2 from "../Hamburger/Hamburger";
 
 const Header = ({isSecondary}) => {
-    
+    const [showMenu, setShowMenu] = useState(false);   
     //ovdje je nav link, ali ne radi
-
     const navLinkStyles = ({isActive}) => {
         return{
             textDecoration: isActive ? 'underline' : 'none',
@@ -21,9 +18,6 @@ const Header = ({isSecondary}) => {
         }
     }
 
-    const [showMenu, setShowMenu] = useState(false);
-
-    
     return (
         <>
         <HeaderWrapper isSecondary={isSecondary}>

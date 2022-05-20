@@ -9,9 +9,7 @@ import coursesMock from "../../lib/mock/courses"
 
 
 const Course = () => {
-
     const navigate = useNavigate();
-
     const {id} = useParams();
     const [courses, setCourses] = useState(null);
     const [course, setCourse] = useState(null);
@@ -28,17 +26,18 @@ const Course = () => {
         <> 
           <Header isSecondary={true} />
           {course && (
-             <Main>
+            <Main>
                 <Section 
                     title={course.title} 
                     actionText={course.subtitle} 
                     buttonText={'Back'} 
                     onClick={() => navigate(-1)}  
                 >            
-                    <SingleCourse  
-                        imgSrc={course.imgSrc} 
-                        imgAlt={course.imgAlt} 
-                        text={course.text} />
+                <SingleCourse  
+                    imgSrc={course.imgSrc} 
+                    imgAlt={course.imgAlt} 
+                    text={course.text} 
+                    />
                 </Section>  
             </Main>
           )}

@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
-import {Form, Field, FormRow, Select, Option, ErrorMessage, FormWrapper} from "../../lib/style/generalStyles";
-import {Formik, validateYupSchema, yupToFormErrors} from "formik";
+import {Form, Field, FormRow, ErrorMessage, FormWrapper} from "../../lib/style/generalStyles";
+import {Formik} from "formik";
 import * as Yup from "yup";
 import {Button} from "../../lib/style/generalStyles";
 

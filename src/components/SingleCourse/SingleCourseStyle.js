@@ -10,7 +10,6 @@ export const SingleCourse = styled.div`
         display: flex;
         justify-content: space-between;
     }
-
 `;
 
 export const SingleCourseFigure = styled.figure`
@@ -28,16 +27,14 @@ export const SingleCourseFigure = styled.figure`
         flex-shrink: 0;
         }
     
-
     @media (${breakpoints.desktopLarge}){
-   
             width: 450px;
             height: 450px;
         }
 `;
 
 export const SingleCourseImg = styled.img`
-     width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 `;
@@ -46,17 +43,12 @@ export const SingleCourseText = styled.p`
     font-size: 16px;
     line-height: 180%;
     color: ${colors.textPrimary};
-
         
     @media (${breakpoints.tablet}){
-
       padding-left: 48px;    
-
         }
 
     @media (${breakpoints.desktopLarge}){
-       
         padding-left: 64px;                    
-        
         }
 `;

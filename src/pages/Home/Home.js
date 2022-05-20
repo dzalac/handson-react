@@ -21,7 +21,6 @@ const Home = () => {
         setTimeout(() => {
             setCourses(coursesMock)
         },1000)
-   
     },[])
 
     const override = css`
@@ -42,20 +41,17 @@ const Home = () => {
                     actionText={'Learn Something new'}
                     buttonText={'More courses'}
                     onClick={() => navigate('/courses')  }
-
-                     >
-                       
-
-                     {courses && <Grid>
-                            {courses.map((course, index) => index <= 3 && 
-                              <CourseCard
-                              key={course.id}
-                              courseId={course.id}
-                              imgSrc={course.imgSrc}
-                              imgAlt={course.imgAlt}
-                              title={course.title}
-                              subtitle={course.subtitle}
-                        />
+                    >                      
+                    {courses && <Grid>
+                        {courses.map((course, index) => index <= 3 && 
+                            <CourseCard
+                            key={course.id}
+                            courseId={course.id}
+                            imgSrc={course.imgSrc}
+                            imgAlt={course.imgAlt}
+                            title={course.title}
+                            subtitle={course.subtitle}
+                            />
                         )}
                         </Grid>}
                         <ClipLoader 
@@ -64,10 +60,8 @@ const Home = () => {
                         color={"#123abc"}
                         loading={!courses}/>                                               
                 </Section>   
-
                 <Section isHeadingVisible={false} modifiers={['Testimonials']}> <Testimonial></Testimonial> </Section>      
             </Main>
-            
         </>
     );
 };

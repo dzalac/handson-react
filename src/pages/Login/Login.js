@@ -38,8 +38,8 @@ const Login = () => {
             
             >
                 {formik => (
-                    <FormWrapper>
-                        <Form isCentered >
+                    <FormWrapper isCentered>
+                        <Form>
                             <FormRow>
                                 <Field type='email' name='email' placeholder='Email...' disabled={formik.isSubmitting} />
                                 <ErrorMessage component={'div'} name='email' />

@@ -5,6 +5,7 @@ import Home from './pages/Home/Home.js';
 import Course from './pages/Course/Course';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
+import Profile from './pages/Profile/Profile';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path='/course/:id' element={<Course/>} />
             <Route path='/register' element={<Register/>} />
             <Route path='/sign-in' element={<Login/>} />
+            <Route path='/profile' element={<Profile/>} />
         </Routes>
    </>
   );

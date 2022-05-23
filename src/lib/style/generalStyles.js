@@ -75,6 +75,11 @@ export const Button = styled.button`
         margin: 0 auto; 
     `}
 
+    ${props => props.isProfile && `
+        display: flex;
+        
+    `}
+
 `;
 
 export const FormWrapper = styled.div`
@@ -132,6 +137,10 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
     color: ${colors.primary};
     padding-top: 8px;
 `;
+
+export const Headline = styled.p`
+    margin-bottom: 5px;
+`
 
 
 export const Search = styled.input`

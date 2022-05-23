@@ -26,7 +26,8 @@ const Header = ({isSecondary}) => {
                     <LogoElement src={LogoImg} alt="logo" />
                 </LogoLink>
                 <Hamburger onClick={() => setShowMenu(!showMenu) } />
-                <Nav>                 
+                <Nav>
+                    <HeaderNavLink to="/profile">Profile</HeaderNavLink>                 
                     <HeaderNavLink to="/courses">Courses</HeaderNavLink>
                     <ButtonLink to="/sign-in" >
                         <Button isNav>Sign In</Button>  
